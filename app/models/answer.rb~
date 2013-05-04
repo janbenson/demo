@@ -1,0 +1,5 @@
+class Answer < ActiveRecord::Base
+	attr_accessible :question_id, :question_num, :agree , :importance, :user_id, :comments
+	belongs_to :question
+	belongs_to :user
+end

@@ -1,0 +1,19 @@
+$(document).ready(function () {
+    var values_to_submit = $(".edit_category" ).serialize();
+     $(".edit_category" ).find('input[type=submit]').click(function () {		
+        $(".edit_category" ).submit();
+	$.ajax({
+	    // the URL for the request
+	    url: "/categories/:id",
+	    // the data to send (will be converted to a query string)
+	    data: values_to_submit,
+	    // whether this is a POST or GET request
+	    type: "POST",
+	    // the type of data we expect back
+	    dataType : "json",
+   }).success(function(json){
+        //act on result.
+    });
+    return false; // prevents normal behaviour
+});
+});   
