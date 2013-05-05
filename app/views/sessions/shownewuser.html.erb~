@@ -21,8 +21,7 @@
 		 	    @CatName = @cat[i][:name] 
 		 	    @id = @cat[i][:id]%>
    		           <li id="draggable">
-  			    <%= link_to image_tag(@sm_pic, :border => 0), {:action => 'show', :controller => 'categories' ,:id => @id.to_f},  :data => @id  %>
-  			    <%=  hidden_field_tag @uid %>
+  			     <%= link_to image_tag(@sm_pic, :border => 0), {:action => 'show', :controller => 'categories' ,:data => @id.to_f}, :data => @id  %>
 			  </li> 
 			 <% end %>  
 			</ul>
@@ -46,7 +45,7 @@
 		 	    @CatName = @cat[i][:name] 
 		 	    @id = @cat[i][:id]%>
    		           <li id="draggable">
-  			      <%= link_to image_tag(@sm_pic, :border => 0),@CatName, {:action => 'show', :controller => 'categories' ,:data => @id.to_f}, :data => @id  %>
+  			      <%= link_to image_tag(@sm_pic, :border => 0), {:action => 'show', :controller => 'categories' ,:data => @id.to_f}, :data => @id  %>
 	     		  </li>
 	     		     
 			 <% end %>

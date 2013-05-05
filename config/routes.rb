@@ -16,6 +16,7 @@ Demo::Application.routes.draw do
     match '/signin',  :to => 'sessions#new'
     match 'sessions/:id/shownewuser',  :to => 'sessions#shownewuser' , :as => :shownewuser
     match 'profiles/setuserprofile',  :to => 'profiles#setuserprofile' , :as => :setuserprofile
+    match 'sessions/:id/showsurvey', :to => 'sessions#showsurvey', :as => :showsurvey
     
     match '/signout', :to => 'sessions#destroy'
     root :to => 'demos#index'

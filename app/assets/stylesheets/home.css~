@@ -1548,8 +1548,6 @@ display: inline;
   padding: 6px 9px 5px 15px;
   font-size: 15px;
 }
-.showSurvey { margin: 0; }
-  
 
 .debug { color: #09c;}
 

@@ -18,17 +18,17 @@ $(function() {
       hoverClass: "ui-state-hover"
     } );
   }
+  
+  $(document).on('click', '#showSurvey', function() {  
+  var category = event.currentTarget.attributes.item(2)
+  var id = gon.your_object.id  		  
+  event.preventDefault(); // Prevent link from following its href
+  valuesToSubmit = { categoryValue: category, uid: id};
+ });   
+   
  })
-  $( "#pri th" ).droppable({
-      activeClass: "ui-state-default",
-      hoverClass: "ui-state-hover",
-      accept: ":not(.ui-sortable-helper)",
-      drop: function( event, ui ) {
-        $( this ).find( ".placeholder" ).remove();
-      //  $ ui.draggable.context.baseURI="http://0.0.0.0:3000/surveys/index";
-        $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
-      }
-    });
+  
+  
  $(document).ready(function() {
     $( "#draggable li" ).draggable({appendTo: "body", helper: "clone"});
 
@@ -37,9 +37,8 @@ $(function() {
       hoverClass: "ui-state-hover",
       accept: ":not(.ui-sortable-helper)",
       drop: function( event, ui ) {
-      	 $(this).find(".placeholder").remove();     
-      	 $("<li></li>").append(ui.draggable.contents().clone(true)).appendTo(this);
-      	 
+      	 $(this).find(".placeholder").remove();  
+      	 $("<li></li>").append(ui.draggable.contents().clone(true)).addClass( "showSurvey"). appendTo(this);
       	 value_to_submit= $(ui.draggable.find("input[type=hidden]"));
       	 var category = value_to_submit.context.childNodes[1].attributes.data.value;
       	 var id = gon.your_object.id
@@ -65,5 +64,13 @@ $(function() {
         return true; // prevents normal behaviour
       }
     })
+  $(document).on('click', '#showSurvey', function() {  
+  var category = event.currentTarget.attributes.item(2)
+  var id = gon.your_object.id  		  
+  event.preventDefault(); // Prevent link from following its href
+  valuesToSubmit = { categoryValue: category, uid: id};
+ });   
+   
+    
   });
 

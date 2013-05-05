@@ -5,7 +5,7 @@
 
 <ol>
 
-<%= form_for( @questions,  :url => updateanswers_path(@questions), :html => { :method =>:put }, :remote => true)  do |f| %>
+<%= form_for( @questions, :remote => true)  do |f| %>
 
 <ul id='questionarea'>
 <%=@current_question %>

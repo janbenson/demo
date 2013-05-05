@@ -84,7 +84,34 @@ def index
      end 
 end
  end
-  
+ def updateanswers
+     @formresults = params[:category]	  
+     @category = Category.find(params[:id])	   
+     @formresults = params[:category]	  
+     @question_id = @formresults[:question_id]
+     @user_id = @formresults[:user_id]
+     @answer_details = @formresults[:answer]
+
+     @answer=@category.questions.find(@question_id).answers.find_by_user_id(@user_id)
+     @answer.agree = @answer_details[:agree]
+     @answer.importance = @answer_details[:importance]
+     @answer.importance = @answer_details[:comments]
+     
+     if @answer.save then
+     	     @counter = @question_id.to_i
+     	     @counter = @counter+1
+     	     @current_question_rec = @category.questions.find_by_question_id(@counter)
+     	     @current_question = @current_question_rec.question 
+     	     @current_question_id = @counter
+     	     @answer = @category.questions.find(@current_question_id).answers.find_by_user_id(@user_id)
+     	     
+     	     
+ 	 respond_to do |format|
+ 	     format.html { redirect_to @category }
+             format.js { render }
+     end 
+end
+ end  
   def destroy
     @category = Category.find(params[:id])
     @category.destroy

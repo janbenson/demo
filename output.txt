@@ -47,5 +47,6 @@ edit_questions GET    /questions/edit(.:format)           questions#edit
         signin        /signin(.:format)                   sessions#new
    shownewuser        /sessions/:id/shownewuser(.:format) sessions#shownewuser
 setuserprofile        /profiles/setuserprofile(.:format)  profiles#setuserprofile
+    showsurvey        /sessions/:id/showsurvey(.:format)  sessions#showsurvey
        signout        /signout(.:format)                  sessions#destroy
           root        /                                   demos#index

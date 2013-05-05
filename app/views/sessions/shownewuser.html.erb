@@ -21,7 +21,7 @@
 		 	    @CatName = @cat[i][:name] 
 		 	    @id = @cat[i][:id]%>
    		           <li id="draggable">
-  			     <%= link_to image_tag(@sm_pic, :border => 0), {:action => 'show', :controller => 'categories' ,:data => @id.to_f}, :data => @id  %>
+  			    <%= link_to image_tag(@sm_pic, :border => 0), showsurvey_path, :data => @id , :id => 'showSurvey', :remote => true %>
 			  </li> 
 			 <% end %>  
 			</ul>
@@ -33,7 +33,7 @@
 		 	    @CatName = @cat[i][:name] 
 		 	    @id = @cat[i][:id]%>
    		            <li id="draggable">
-                             <%= link_to image_tag(@sm_pic, :border => 0), {:action => 'show', :controller => 'categories' ,:data => @id.to_f}, :data => @id  %>
+  			    <%= link_to image_tag(@sm_pic, :border => 0), showsurvey_path, :data => @id %>
                              </li>
 	     		  <% end %>
 			</ul>
@@ -45,7 +45,7 @@
 		 	    @CatName = @cat[i][:name] 
 		 	    @id = @cat[i][:id]%>
    		           <li id="draggable">
-  			      <%= link_to image_tag(@sm_pic, :border => 0), {:action => 'show', :controller => 'categories' ,:data => @id.to_f}, :data => @id  %>
+  			    <%= link_to image_tag(@sm_pic, :border => 0), showsurvey_path, :data => @id %>
 	     		  </li>
 	     		     
 			 <% end %>

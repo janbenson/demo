@@ -1,0 +1,10 @@
+jQuery.fn.submitOnCheck = function () {
+        $(".edit_category" ).submit(function();
+        });
+};
+
+$(function () {
+  $(".edit_category").submitOnCheck();
+});
+
+

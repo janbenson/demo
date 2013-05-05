@@ -12,14 +12,18 @@ end
 def update
    @profile= Profile.find_by_id(params[:uid]) 
    @profile.update_attribute(params[:userpri], params[:categoryValue])
-   @category = Category.find(params[:categoryValue])
-   @survey = @category.surveys.find_all
-   @survey.each do |question| 
+   @category_id = params[:categoryValue].to_i
+   @category = Category.find(@category_id)
+   @question = @category.questions.find_all
+   @counter = 1
+   @question.each do |question| 
 	    @answer = Answer.new
-	    @answer.survey_id = question.id
+	    @answer.question_id = question.id
 	    @answer.user_id = params[:uid]  
-	    @answer.save 
-            end
+	    @answer.question_num = @counter
+	    @answer.save
+	    @counter = @counter+1
+    end
    if @profile.save 
       respond_with @profile
    end 	   
