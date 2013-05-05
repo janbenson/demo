@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 	
      layout "frontpage"
+     respond_to :json
      
   def shownewuser
     @logged_in = 'yes'
@@ -11,20 +12,22 @@ class SessionsController < ApplicationController
   def showsurvey
   	  @title = "Survey for"
   	   @category = Category.find(params[:data])
-           @questions = @category.questions.find_all
+           @questions = @category.questions.find_all_by_category_id(params[:data])
            @current_question_rec =  @questions.first
            @current_question = @current_question_rec.question
            @current_question_id = @current_question_rec.question_id
-           @answer =   @answer = Answer.find_by_sql(["SELECT answers.* from answers 
-   	   WHERE answers.user_id = ? AND answers.question_id = ?",
-   	   (params[:id]), @current_question_id])  
-
+           @answer = @category.questions.find(@current_question_id).answers.find_by_user_id(params[:id])
    	   respond_to do |format|
  	     format.html { redirect_to @category }
              format.js { render }
      end    	   
   end
   
+
+
+
+
+
   def new
     @logged_in = 'yes'
     @title = "Sign in"

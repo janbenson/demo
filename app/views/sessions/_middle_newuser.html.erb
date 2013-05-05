@@ -1,16 +1,3 @@
-<%= include_gon %>
-<div id="content" class="clearfix">
-<% @cat = Category.all %>
-<% @numberofcategories =@cat.count  %>
-<% @user = User.find(@uid)  %>
-
-<%= render :partial => 'layouts/user_profile' %>
-          <div class="inner">
-          
-            <div class="top_area">          
-              </div> <!-- top_area -->	             
-              <p>Welcome <%=@user.email%> Drag the topics into the order of importance to you.</p>
-               <div id="middle_area" > 
                <div id = "draggable" class="ui-widget-content">
 		    <h3 class="ui-widget-header">Issues</h3>
 		     <table>
@@ -52,12 +39,5 @@
 			  </ul>
 		         </td></tr>
 	         </table>
-	         </div id> <!-- cat>
-               </div> <!-- middle_area -->
-	  <div id="find">
-             <p>Where voters and politicians can discuss and learn about the issues for free with no advertising dollars getting in the way <br />
-             Subscribe to RSS feeds to stay in touch with their latest votes. </p>
-          </div>
-      
-    </div>   <!-- inner_area -->
-</div>       <!-- content -->
+	         </div id>  <!-- draggable -->
+               </div>  <!-- middle_area -->

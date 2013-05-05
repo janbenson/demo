@@ -18,15 +18,8 @@ $(function() {
       hoverClass: "ui-state-hover"
     } );
   }
-  
-  $(document).on('click', '#showSurvey', function() {  
-  var category = event.currentTarget.attributes.item(2)
-  var id = gon.your_object.id  		  
-  event.preventDefault(); // Prevent link from following its href
-  valuesToSubmit = { categoryValue: category, uid: id};
- });   
-   
- })
+ 
+})
   
   
  $(document).ready(function() {
@@ -61,16 +54,10 @@ $(function() {
           //focus on the input again
           //$("input#task_name").focus();
     });
-        return true; // prevents normal behaviour
+        return false; // prevents normal behaviour
       }
     })
-  $(document).on('click', '#showSurvey', function() {  
-  var category = event.currentTarget.attributes.item(2)
-  var id = gon.your_object.id  		  
-  event.preventDefault(); // Prevent link from following its href
-  valuesToSubmit = { categoryValue: category, uid: id};
- });   
-   
-    
-  });
+
+});  
+ 
 
