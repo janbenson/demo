@@ -8,6 +8,15 @@
 <ul id='questionarea'>
 <%=@current_question %>
 </ul>
+<%=form_for ( , :method => :put)  %>
+@offer do |f| %>
+  <%= f.label :version, 'Version' %>:
+  <%= f.text_field :version %><br />
+  <%= f.label :author, 'Author' %>:
+  <%= f.text_field :author %><br />
+  <%= f.submit %>
+<% end %>
+
 <div id = 'hidden_field_usr' >
 <%=hidden_field_tag :user_id, {:value => params[:id]}  %>
 </div>

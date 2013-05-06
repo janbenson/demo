@@ -1,0 +1,1 @@
+$('#middle_area').replace_html( "<%= escape_javascript render :partial => "middle_survey" %> ");

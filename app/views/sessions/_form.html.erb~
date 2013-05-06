@@ -40,6 +40,6 @@
 </ul>
 	       
 <ul>
-	<div id = "qsubmit" > <%= submit_tag :remote => true %> </div>
+	<div id = "qsubmit" > <%= submit_tag %> </div>
 </ul>
 </ol>

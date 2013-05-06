@@ -1,14 +1,33 @@
 class SessionsController < ApplicationController
 	
      layout "frontpage"
+     respond_to :json
+     
   def shownewuser
     @logged_in = 'yes'
     @title = "Sign in"
     @uid = params[:id]
     gon.your_object = User.find(params[:id])
   end
+  def showsurvey
+  	  @title = "Survey for"
+  	   @category = Category.find(params[:data])
+           @questions = @category.questions.find_all_by_category_id(params[:data])
+           @current_question_rec =  @questions.first
+           @current_question = @current_question_rec.question
+           @current_question_id = @current_question_rec.question_id
+           @answer = @category.questions.find(@current_question_id).answers.find_by_user_id(params[:id])
+   	   respond_to do |format|
+ 	     format.html { redirect_to @category }
+             format.js
+     end    	   
+  end
   
-  
+
+
+
+
+
   def new
     @logged_in = 'yes'
     @title = "Sign in"

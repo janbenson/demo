@@ -15,14 +15,11 @@ def update
    @category_id = params[:categoryValue].to_i
    @category = Category.find(@category_id)
    @question = @category.questions.find_all
-   @counter = 1
    @question.each do |question| 
 	    @answer = Answer.new
 	    @answer.question_id = question.id
 	    @answer.user_id = params[:uid]  
-	    @answer.question_num = @counter
 	    @answer.save
-	    @counter = @counter+1
     end
    if @profile.save 
       respond_with @profile

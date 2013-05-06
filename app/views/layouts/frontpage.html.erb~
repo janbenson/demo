@@ -28,8 +28,9 @@
     <% end %>
       <%= yield %>
 
-       </div>
-    </div> 
+    </div>
+    <!-- // wrapper -->
+    </div> <!-- // top bar -->
       <%= render :partial => 'shared/analytics_foot' %>
   </body>
 </html>

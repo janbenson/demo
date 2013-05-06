@@ -1,0 +1,11 @@
+<p>
+   <%=@category.name %>
+</p>
+<ol>
+
+<ul id='questionarea'>
+<%=@current_question %>
+</ul>
+
+
+</ol>

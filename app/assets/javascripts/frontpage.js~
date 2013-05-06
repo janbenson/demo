@@ -54,16 +54,10 @@ $(function() {
           //focus on the input again
           //$("input#task_name").focus();
     });
-        return true; // prevents normal behaviour
+        return false; // prevents normal behaviour
       }
     })
 
-  $(document).on('click', '#showSurvey', function() {  
-  event.preventDefault(); // Prevent link from following its href		  
-  var id = gon.your_object.id  		  
-  valuesToSubmit= { categoryValue: category, uid: id};
-  var str = jQuery.param(valuesToSubmit);
- });
 });  
  
 
