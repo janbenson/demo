@@ -1,1 +1,2 @@
-$('#questionarea').html( "<%= escape_javascript render :partial => "current_question" %> ");
+$('#questionarea').html( "<%= j render :partial => "current_question" %> ");
+$('#surveysubmit').html( "<%= j render :partial => "update_submit" %> ");

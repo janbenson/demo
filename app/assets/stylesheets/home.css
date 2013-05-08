@@ -234,6 +234,15 @@ display: inline;
   font-size: 15px;
 }
 
+
+.debug { color: #09c;}
+
+
+table,td,th
+{
+width:1000px;
+border:1px solid black;
+}
 /* Categories */
 
 #drag {
@@ -246,14 +255,101 @@ display: inline;
   padding: 6px 9px 5px 15px;
   font-size: 15px;
 }
-.showSurvey { margin: 0; }
-  
-
-.debug { color: #09c;}
-
-
-table,td,th
-{
-width:1000px;
-border:1px solid black;
+/*importance */
+ #importance {
+    display: inline;
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
 }
+#importance ul {
+    display: inline;
+    list-style-type:none;
+    margin:3px;
+    padding:0.4em;
+    border:1px solid black;
+}
+#importance ul li {
+    display: inline;
+    list-style-type:none;
+    padding: 0.4em;
+    margin: 3px;
+    font-size: 1.4em;
+    height: 18px border:1px solid black;
+}
+#importance ul li a {
+    display: inline;
+    list-style-type:none;
+    padding: 6px 9px 5px 15px;
+    font-size: 13px;
+}
+#importance.ui-selecting {
+    background: #FECA40;
+}
+#importance.ui-selected {
+    background: #F39814;
+    color: yellow;
+}
+#importance ul li a:visited {
+    display: inline;
+    list-style-type:none;
+    padding: 6px 9px 5px 15px;
+    font-size: 13px;
+}
+#importance ul li a:hover {
+    display: inline;
+    list-style-type:none;
+    padding: 6px 9px 5px 15px;
+    font-size: 13px;
+}
+/*agree */
+ #agree {
+    display: inline;
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+#agree ul {
+    display: inline;
+    list-style-type:none;
+    margin:3px;
+    padding:0.4em;
+    border:1px solid black;
+}
+#agree ul li {
+    display: inline;
+    list-style-type:none;
+    padding: 0.4em;
+    margin: 3px;
+    font-size: 1.4em;
+    height: 18px border:1px solid black;
+}
+#agree ul li a {
+    display: inline;
+    list-style-type:none;
+    padding: 6px 9px 5px 15px;
+    font-size: 13px;
+}
+#agree.ui-selecting {
+    background: #FECA40;
+}
+#agree.ui-selected {
+    background: #F39814;
+    color: yellow;
+}
+#agree ul li a:visited {
+    display: inline;
+    list-style-type:none;
+    padding: 6px 9px 5px 15px;
+    font-size: 13px;
+}
+#agree ul li a:hover {
+    display: inline;
+    list-style-type:none;
+    padding: 6px 9px 5px 15px;
+    font-size: 13px;
+}
+ #format { margin-top: 2em; }
+

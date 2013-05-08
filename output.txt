@@ -1,52 +1,53 @@
-          demo POST   /demo(.:format)                     demos#create
-      new_demo GET    /demo/new(.:format)                 demos#new
-     edit_demo GET    /demo/edit(.:format)                demos#edit
-               GET    /demo(.:format)                     demos#show
-               PUT    /demo(.:format)                     demos#update
-               DELETE /demo(.:format)                     demos#destroy
-    categories GET    /categories(.:format)               categories#index
-               POST   /categories(.:format)               categories#create
-  new_category GET    /categories/new(.:format)           categories#new
- edit_category GET    /categories/:id/edit(.:format)      categories#edit
-      category GET    /categories/:id(.:format)           categories#show
-               PUT    /categories/:id(.:format)           categories#update
-               DELETE /categories/:id(.:format)           categories#destroy
-     questions POST   /questions(.:format)                questions#create
- new_questions GET    /questions/new(.:format)            questions#new
-edit_questions GET    /questions/edit(.:format)           questions#edit
-               GET    /questions(.:format)                questions#show
-               PUT    /questions(.:format)                questions#update
-               DELETE /questions(.:format)                questions#destroy
-       answers POST   /answers(.:format)                  answers#create
-   new_answers GET    /answers/new(.:format)              answers#new
-  edit_answers GET    /answers/edit(.:format)             answers#edit
-               GET    /answers(.:format)                  answers#show
-               PUT    /answers(.:format)                  answers#update
-               DELETE /answers(.:format)                  answers#destroy
-         users GET    /users(.:format)                    users#index
-               POST   /users(.:format)                    users#create
-      new_user GET    /users/new(.:format)                users#new
-     edit_user GET    /users/:id/edit(.:format)           users#edit
-          user GET    /users/:id(.:format)                users#show
-               PUT    /users/:id(.:format)                users#update
-               DELETE /users/:id(.:format)                users#destroy
-      profiles GET    /profiles(.:format)                 profiles#index
-               POST   /profiles(.:format)                 profiles#create
-   new_profile GET    /profiles/new(.:format)             profiles#new
-  edit_profile GET    /profiles/:id/edit(.:format)        profiles#edit
-       profile GET    /profiles/:id(.:format)             profiles#show
-               PUT    /profiles/:id(.:format)             profiles#update
-               DELETE /profiles/:id(.:format)             profiles#destroy
-      sessions POST   /sessions(.:format)                 sessions#create
-   new_session GET    /sessions/new(.:format)             sessions#new
-       session DELETE /sessions/:id(.:format)             sessions#destroy
-       contact        /contact(.:format)                  pages#contact
-         about        /about(.:format)                    pages#about
-          help        /help(.:format)                     pages#help
-        signup        /signup(.:format)                   users#new
-        signin        /signin(.:format)                   sessions#new
-   shownewuser        /sessions/:id/shownewuser(.:format) sessions#shownewuser
-setuserprofile        /profiles/setuserprofile(.:format)  profiles#setuserprofile
-    showsurvey        /sessions/:id/showsurvey(.:format)  sessions#showsurvey
-       signout        /signout(.:format)                  sessions#destroy
-          root        /                                   demos#index
+          demo POST   /demo(.:format)                       demos#create
+      new_demo GET    /demo/new(.:format)                   demos#new
+     edit_demo GET    /demo/edit(.:format)                  demos#edit
+               GET    /demo(.:format)                       demos#show
+               PUT    /demo(.:format)                       demos#update
+               DELETE /demo(.:format)                       demos#destroy
+    categories GET    /categories(.:format)                 categories#index
+               POST   /categories(.:format)                 categories#create
+  new_category GET    /categories/new(.:format)             categories#new
+ edit_category GET    /categories/:id/edit(.:format)        categories#edit
+      category GET    /categories/:id(.:format)             categories#show
+               PUT    /categories/:id(.:format)             categories#update
+               DELETE /categories/:id(.:format)             categories#destroy
+     questions POST   /questions(.:format)                  questions#create
+ new_questions GET    /questions/new(.:format)              questions#new
+edit_questions GET    /questions/edit(.:format)             questions#edit
+               GET    /questions(.:format)                  questions#show
+               PUT    /questions(.:format)                  questions#update
+               DELETE /questions(.:format)                  questions#destroy
+       answers POST   /answers(.:format)                    answers#create
+   new_answers GET    /answers/new(.:format)                answers#new
+  edit_answers GET    /answers/edit(.:format)               answers#edit
+               GET    /answers(.:format)                    answers#show
+               PUT    /answers(.:format)                    answers#update
+               DELETE /answers(.:format)                    answers#destroy
+         users GET    /users(.:format)                      users#index
+               POST   /users(.:format)                      users#create
+      new_user GET    /users/new(.:format)                  users#new
+     edit_user GET    /users/:id/edit(.:format)             users#edit
+          user GET    /users/:id(.:format)                  users#show
+               PUT    /users/:id(.:format)                  users#update
+               DELETE /users/:id(.:format)                  users#destroy
+      profiles GET    /profiles(.:format)                   profiles#index
+               POST   /profiles(.:format)                   profiles#create
+   new_profile GET    /profiles/new(.:format)               profiles#new
+  edit_profile GET    /profiles/:id/edit(.:format)          profiles#edit
+       profile GET    /profiles/:id(.:format)               profiles#show
+               PUT    /profiles/:id(.:format)               profiles#update
+               DELETE /profiles/:id(.:format)               profiles#destroy
+      sessions POST   /sessions(.:format)                   sessions#create
+   new_session GET    /sessions/new(.:format)               sessions#new
+       session DELETE /sessions/:id(.:format)               sessions#destroy
+       contact        /contact(.:format)                    pages#contact
+         about        /about(.:format)                      pages#about
+          help        /help(.:format)                       pages#help
+        signup        /signup(.:format)                     users#new
+        signin        /signin(.:format)                     sessions#new
+   shownewuser        /sessions/:id/shownewuser(.:format)   sessions#shownewuser
+setuserprofile        /profiles/setuserprofile(.:format)    profiles#setuserprofile
+    showsurvey        /sessions/:id/showsurvey(.:format)    sessions#showsurvey
+ updateanswers        /sessions/:id/updateanswers(.:format) sessions#updateanswers
+       signout        /signout(.:format)                    sessions#destroy
+          root        /                                     demos#index

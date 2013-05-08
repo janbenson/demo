@@ -1,11 +1,6 @@
-<p>
-  <strong>Name:</strong>
-  <%=@category.name %>
-</p>
 <ul id='questionarea'>
 <%=@current_question %>
 <% answer_fields = @answer %>
-
 <ol>
 <div id = 'hidden_field_usr' >
 <%=hidden_field_tag :user_id, {:value => params[:id]}  %>
@@ -33,13 +28,6 @@
       <p><%= text_field (answer_fields, :comments) %> <p>
   </p>
 </div>
-<%@data = { :category => @category.id ,:questionid => @current_question_id  } %>
+<%@data = { :category => @category.id ,:questionid => @current_question_id } %>
 
-</ul>
-<div id = "surveysubmit" >  
-<button>
-<%= link_to "answer this", updateanswers_path(:data => @data) ,:remote => true  %>
-</button>
-</div>
-</ol>
 </ul>

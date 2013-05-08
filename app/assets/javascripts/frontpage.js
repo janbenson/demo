@@ -7,7 +7,7 @@ $(function() {
  // This will display the droppable (jquery-ui)    
   // Create the user priorities list
   var numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ];
-
+  
  
   for ( var i=0; i<18; i++ ) {
     $('<th>' + numbers[i] + '</th>').data( 'number', numbers[i] ).attr( 'id', 'pri'+numbers[i] ).appendTo( '#pri' ).droppable( {
@@ -18,6 +18,7 @@ $(function() {
       hoverClass: "ui-state-hover"
     } );
   }
+ 
  
 })
   
@@ -58,6 +59,10 @@ $(function() {
       }
     })
 
-});  
  
+}); 
 
+$(function() { $( "#surveysubmit" ).click(function( event ) {event.preventDefault();});}); 
+ 
+ 
+       
